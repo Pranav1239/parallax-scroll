@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Catgif from "./assests/cat.gif";
 
 function App() {
+  //Practice parallax scroll
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      {/* add parallax for pages */}
+      <Parallax pages={4} className="parallax">
+        {/* add layers for inside single page even you can add background img by style in parallaxlayer */}
+        <ParallaxLayer offset={0} speed={0.6}>
+          <h1>Hey</h1>
+          <img src={Catgif} alt="" />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1}
+          speed={1}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <h1>parallax scroll</h1>
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={2}>
+          <h1>Hehe</h1>
+        </ParallaxLayer>
+      </Parallax>
+    </>
   );
 }
 
