@@ -1,6 +1,5 @@
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Catgif from "./assests/cat.gif";
 
 function App() {
   //Practice parallax scroll
@@ -11,7 +10,6 @@ function App() {
         {/* add layers for inside single page even you can add background img by style in parallaxlayer */}
         <ParallaxLayer offset={0} speed={0.6}>
           <h1>Hey</h1>
-          <img src={Catgif} alt="" />
         </ParallaxLayer>
         <ParallaxLayer
           offset={1}
